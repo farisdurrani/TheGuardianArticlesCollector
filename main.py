@@ -6,7 +6,7 @@ import os
 import pandas as pd
 import requests
 
-API_KEY = config("TEST_API_KEY")
+API_KEY = config("API_KEY")
 START_DATES = ["2015-01-01",
                "2015-03-01",
                "2015-06-01",
@@ -142,7 +142,8 @@ def collect3Months(monthListIndex):
     while currentPage <= totalPages:
         if currentPage % 1000 == 0:
             writeToCSV(contentsToWrite, f"g-month{monthListIndex}-page{currentPage}")
-        print(f"Acquiring page {currentPage} / {totalPages}")
+        print(f"Acquiring month {monthListIndex} / {len(START_DATES)} "
+              f"page {currentPage} / {totalPages}")
         try:
             totalPages = getThisPage(currentPage, contentsToWrite,
                                      monthListIndex)
