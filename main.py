@@ -16,10 +16,11 @@ def abort(contentsToWrite: List[Dict[str, any]], currentPage):
 
 def writeToCSV(contentsToWrite: List[Dict[str, any]], filename: str):
     df = pd.DataFrame(contentsToWrite)
-    df.to_csv(f"{filename}.csv", encoding='utf-8')
+    filepath = f"outputs/{filename}.csv"
+    df.to_csv(filepath, encoding='utf-8')
     contentsToWrite.clear()
     print(f"File successfully {filename} written with "
-          f"size {os.path.getsize(f'{filename}.csv') / 1e6: _} MB")
+          f"size {os.path.getsize(f'{filepath}') / 1e6: _} MB")
 
 
 def queryAPI(currentPage):
@@ -88,11 +89,11 @@ def getThisPage(currentPage, contentsToWrite):
 
 def getAllArticles():
     contentsToWrite = []
-    currentPage = 10
+    currentPage = 1
     totalPages = currentPage
 
     while currentPage <= totalPages:
-        if currentPage % 20 == 0:
+        if currentPage % 10 == 0:
             writeToCSV(contentsToWrite, f"g-page{currentPage}")
             return
         print(f"Acquiring page {currentPage} / {totalPages}")
