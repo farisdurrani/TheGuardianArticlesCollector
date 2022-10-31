@@ -121,7 +121,7 @@ def getThisPage(currentPage, contentsToWrite, monthListIndex):
                   and response["response"].get("status", None) == "ok")
     if not statusIsOk:
         print("response:", response)
-        raise ValueError("Status is not OK")
+        raise Exception("Status is not OK")
 
     appendResults(response["response"]["results"], contentsToWrite)
 
