@@ -46,6 +46,7 @@ START_DATES = ["2015-01-01",
                "2022-03-01",
                "2022-06-01",
                "2022-09-01",
+               "2022-12-01",
                ]
 
 
@@ -142,6 +143,9 @@ def collect3Months(monthListIndex):
     while currentPage <= totalPages:
         if currentPage % 1000 == 0:
             writeToCSV(contentsToWrite, f"g-month{monthListIndex}-page{currentPage}")
+        if currentPage % 2 == 0:
+            currentPage += 1
+            continue
         print(f"Acquiring month {monthListIndex} / {len(START_DATES)} "
               f"page {currentPage} / {totalPages}")
         try:
