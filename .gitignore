@@ -1,3 +1,4 @@
 .env
 outputs/*
 !outputs/.gitkeep
+!outputs/sample_output.csv
