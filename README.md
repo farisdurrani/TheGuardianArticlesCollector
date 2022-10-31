@@ -14,7 +14,7 @@ Running:
     API_KEY="00c0eb00-c0fe-4c1e-a312-000000"
     ```
 2. Run `python main.py`
-3. See the results in new CSV files written to the root directory
+3. See the results in new CSV files written to the `outputs/` directory
 
 # License
 
