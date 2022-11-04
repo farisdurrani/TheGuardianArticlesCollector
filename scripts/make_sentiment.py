@@ -9,12 +9,12 @@ CSV_FILES = [
 ORIGINAL_SAMPLES_DIR = "../outputs/original/"
 SENTIMENTS_DIR = "../outputs/sentiments/"
 analyzer = SentimentIntensityAnalyzer()
-ee = [0]
+count = [0]
 
 
 def produce_sentiment(text):
-    print(ee)
-    ee[0] += 1
+    print(count)
+    count[0] += 1
     return analyzer.polarity_scores(text)
 
 
