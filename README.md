@@ -59,7 +59,7 @@ and append the 4-column results to a copy of the CSV. In the script, simply:
 
 > Note: This script uses multiprocessing which makes it very fast but can be computation-heavy
 
-See [sample_output-sentiments.csv](./scripts/sample_output-sentiments.csv) for a sample output.
+See [sample_output-sentiments.csv](./outputs/sample_output-sentiments.csv) for a sample output.
 
 ![](/.github/readme_assets/sample_sentiment.png)
 
