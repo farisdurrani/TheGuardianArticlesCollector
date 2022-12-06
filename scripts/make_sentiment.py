@@ -3,17 +3,10 @@ import pandas as pd
 import multiprocessing as mp
 
 CSV_FILES = [
-    "cnn_articles-2015-6805.csv",
-    "cnn_articles-2016-1610.csv",
-    "cnn_articles-2017-3555.csv",
-    "cnn_articles-2018-7011.csv",
-    "cnn_articles-2019-2682.csv",
-    "cnn_articles-2020-5418.csv",
-    "cnn_articles-2021-8194.csv",
-    "cnn_articles-2022-3264.csv"
+    "sample_output.csv",
 ]
-ORIGINAL_SAMPLES_DIR = "outputs/"
-SENTIMENTS_DIR = "outputs/sentiments/"
+ORIGINAL_SAMPLES_DIR = "../outputs/"
+SENTIMENTS_DIR = "../outputs/"
 TARGET_COLUMN = "bodyContent"
 analyzer = SentimentIntensityAnalyzer()
 count = [0]

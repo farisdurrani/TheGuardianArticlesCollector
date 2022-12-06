@@ -1,3 +1,6 @@
 .env
 outputs/**/*.csv
 !outputs/sample_output.csv
+!outputs/sample_output-sentiments.csv
+venv/
+.idea/
